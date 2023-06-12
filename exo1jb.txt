@@ -1,0 +1,3 @@
+on telecharge le fichier et il y'a des dossiers dedans avec des :
+injections sql, 
+des get pour voir avecun brut force si les addressessont presentes ou non,

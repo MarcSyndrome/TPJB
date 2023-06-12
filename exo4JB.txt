@@ -107,11 +107,12 @@ Résultat :
 <h1>Well done! You solved recon_06 </h1>
 The key for this exercise is 5cf83b5d-eb6c-4eee-af6c-945f9aed8dfd
 
-Je suis tomber sur une autre solution, (tombé dessus par hasard) en regardant la question 10, je suis aller chercher les noms alternatifs
-et je suis tomber sur une addresse, 
+Je suis tomber sur une autre solution, (tombé dessus par hasard) en regardant la question 10, je suis aller chercher 
+les noms alternatifs et je suis tomber sur une addresse, 
 Nom DNS
 66177e3f25e3ea0713807b1dc5f0b9df.hackycorp.com
 et en cliquant dessus, bim
+recon_06
 ```
 ________________________________________________________________________________________________________________________
 Question 8:
@@ -155,7 +156,11 @@ Avec l'aide de Mel, en utilisant un script bash, nous avons obtenu une image ave
 ```
 ________________________________________________________________________________________________________________________
 Question 12:
-?????????????????????????????????????????????????????????????????????????????
+marc@Syndrome:~$  curl -H "Host: admin.hackycorp.com" http://hackycorp.com/
+<h1>Well done! You solved recon_11 </h1>
+
+The key for this exercise is e4599fa9-1cc4-4916-a394-ce455a954d86
+
 
 ________________________________________________________________________________________________________________________
 Question 13:
@@ -166,8 +171,14 @@ Well done! You solved recon_12
 The key for this exercise is 29e5c97c-7230-46ae-937c-6c56ff33b84f
 ```
 ________________________________________________________________________________________________________________________
-Question 14:
-????????????????????????????????????????????????????????????
+Question 14:sur dns checker , on cherche dans le repertoire "dns lookup", on regarde l'onglet txt et :
+
+TXT
+Type
+Domain Name
+TTL
+Record
+TXT key.z.hackycorp.com 21600 9f883f22-6ea5-4631-bbe8-95841ad63f56 
 
 _________________________________________________________________________________________________________________________
 Question 15:
