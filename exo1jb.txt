@@ -20,3 +20,33 @@ ________________________________________________________________________________
 
 Après 131 tentatives, Il a réussi à trouver le mot de passe.
 
+_________________________________________________________________________________________________________________________
+==> 5. Quel est le type de la quatrième attaque (son nom) et à quelle heure débute-t-elle ?
+
+La quatrième attaque est connue sous le nom d'injection de commande, et elle a commencé à 12:52:36.
+
+_________________________________________________________________________________________________________________________
+==> 6. Quelle est la charge malveillante (payload) utilisée en premier lors de la quatrième attaque ?
+
+Il a utilisé le payload suivant pour notre première injection de commande : %22%22;%20system(%27whoami%27)
+
+_________________________________________________________________________________________________________________________
+==> 7. Y a-t-il une trace démontrant la persistance de l'attaque ? Si oui, quelle est la charge malveillante (payload) 
+utilisée ?
+
+Oui, il y a une trace démontrant la persistance de l'attaque. Il a tenté de créer un utilisateur avec le payload suivant :
+ %22%22;%20system(%27net%20user%20hacker%20Asd123!!%20/add%27). Cependant, le fait que nous ayons exécuté ce payload 
+ deux fois suggère que cela n'a pas fonctionné.
+
+_________________________________________________________________________________________________________________________
+==> 8. Quels sont les actions à entreprendre avant la remise en ligne de l'application ?
+
+Avant de remettre l'application en ligne, plusieurs actions doivent être entreprises :
+
+- Il est essentiel de mesurer l'ampleur de l'attaque en consultant les logs du serveur et en déterminant quelles données
+ ont été compromises. Il est également crucial de vérifier l'intégrité des sauvegardes.
+- Toutes les vulnérabilités exploitées doivent être répertoriées et corrigées.
+- Une restauration complète du système à une date antérieure à l'attaque est nécessaire.
+- Il est recommandé de mettre en place des correctifs pour toutes les vulnérabilités identifiées.
+- Les mots de passe doivent être modifiés et renforcés, car leur découverte en seulement 131 tentatives est préoccupante.
+- La mise en place d'une surveillance automatisée est recommandée.
