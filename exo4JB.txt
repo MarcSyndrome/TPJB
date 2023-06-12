@@ -156,13 +156,12 @@ Avec l'aide de Mel, en utilisant un script bash, nous avons obtenu une image ave
 ________________________________________________________________________________________________________________________
 Question 12:
 
+
 ________________________________________________________________________________________________________________________
 Question 13:
 Il suffit de rafraîchir plusieurs fois la page balancer.hackycorp.com
 
-``
-
-`
+```
 Well done! You solved recon_12
 The key for this exercise is 29e5c97c-7230-46ae-937c-6c56ff33b84f
 ```
@@ -171,9 +170,18 @@ Question 14:
 
 
 Question 15:
+marc@Syndrome:~$ dig AXFR z.hackycorp.com
 
+; <<>> DiG 9.18.12-0ubuntu0.22.04.1-Ubuntu <<>> AXFR z.hackycorp.com
+;; global options: +cmd
+; Transfer failed.
+Le serveur DNS est configuré pour restreindre les transferts de zone uniquement aux hôtes autorisés.
+Je sais pas s'il est possible d'effectuer un transfert de zone pour obtenir une liste complète 
+des enregistrements DNS du domaine z.hackycorp.com...
 
-Question 16:
+Question 16:avec la cli : dig AXFR @z.hackycorp.com int
+On obtient dans les serveursun txt :
+recon_15.int.		604800	IN	TXT	"b55b45a8-63b1-42f7-bd12-a36219ff883d"
 
 
 Question 17:
