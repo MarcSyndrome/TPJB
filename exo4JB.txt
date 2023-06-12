@@ -155,7 +155,7 @@ Avec l'aide de Mel, en utilisant un script bash, nous avons obtenu une image ave
 ```
 ________________________________________________________________________________________________________________________
 Question 12:
-
+?????????????????????????????????????????????????????????????????????????????
 
 ________________________________________________________________________________________________________________________
 Question 13:
@@ -167,8 +167,9 @@ The key for this exercise is 29e5c97c-7230-46ae-937c-6c56ff33b84f
 ```
 ________________________________________________________________________________________________________________________
 Question 14:
+????????????????????????????????????????????????????????????
 
-
+_________________________________________________________________________________________________________________________
 Question 15:
 marc@Syndrome:~$ dig AXFR z.hackycorp.com
 
@@ -179,18 +180,28 @@ Le serveur DNS est configuré pour restreindre les transferts de zone uniquement
 Je sais pas s'il est possible d'effectuer un transfert de zone pour obtenir une liste complète 
 des enregistrements DNS du domaine z.hackycorp.com...
 
+_________________________________________________________________________________________________________________________
 Question 16:avec la cli : dig AXFR @z.hackycorp.com int
 On obtient dans les serveursun txt :
 recon_15.int.		604800	IN	TXT	"b55b45a8-63b1-42f7-bd12-a36219ff883d"
 
 
-Question 17:
+________________________________________________________________________________________________________________________
+Question 17:La reponse est oui, avec la commande:
+marc@Syndrome:~$ dig @z.hackycorp.com +short version.bind txt chaos
+On obtient la reponse:
+"9.9.5-3-Ubuntu"
 
 
+________________________________________________________________________________________________________________________
 Question 18:
+Oui, en allant sur le github et en cliquant sur commit, on trouve 
 
+Hacky Dev (d0fad5ef-ebb2-467c-8868-34e3cf4878b4)
 
+________________________________________________________________________________________________________________________
 Question 19:
+Oui il a d'autre repo, et pour le reste oui, il est possible qu'il est laisser trainer des infos sensibles
 
 ________________________________________________________________________________________________________________________
 Question 20:
