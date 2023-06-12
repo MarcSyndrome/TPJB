@@ -13,3 +13,31 @@ Le nom de domaine malveillant utilisé dans le fichier Examing the Work_From_Hom
 ==> 4. Quel est le nom de domaine malveillant utilisé dans le fichier income_tax_and_benefit_return_2021.docx ?
 
 Le nom de domaine malveillant utilisé dans le fichier income_tax_and_benefit_return_2021.docx est hidusi.com.
+
+==> 5. Quelle est la vulnérabilité technique exploitée dans cet incident ?
+
+Dans cet incident, l'attaque a exploité une vulnérabilité connue sous le nom d'injection d'URL. 
+En utilisant des scripts macros et des dépendances dans le fichier Word, l'attaquant a pu exécuter 
+des scripts malveillants et installer des logiciels malveillants.
+
+==> 6. Quelle(s) solution(s) technique(s) proposes-tu au niveau du back-office de l'application pour 
+prévenir ce type d'incident ? Quel pourrait être le coût de mise en œuvre, sachant que nous traitons 
+environ 40 Go de documents uploadés par mois ?
+
+Pour prévenir ce type d'incident au niveau du back-office de l'application, je propose les solutions 
+techniques suivantes :
+
+1. Mettre en place un filtrage strict des fichiers téléchargés en utilisant des outils d'analyse de 
+sécurité tels que des scanners d'antivirus pour détecter les signatures malveillantes.
+2. Limiter les permissions et les fonctionnalités des macros dans les documents Word afin de réduire 
+les risques d'exécution de scripts malveillants.
+3. Utiliser des mécanismes de validation et de filtrage des URL pour détecter les adresses malveillantes 
+et empêcher leur exécution.
+4. Sensibiliser les utilisateurs à l'importance de la sécurité et aux risques associés aux fichiers 
+téléchargés, en leur fournissant des formations et des directives sur les bonnes pratiques en matière de sécurité.
+
+En ce qui concerne le coût de mise en œuvre, il peut varier en fonction de la solution choisie. 
+Cependant, l'utilisation d'outils d'analyse de sécurité et de mécanismes de filtrage peut être relativement 
+abordable, surtout si vous optez pour des solutions open source ou commerciales abordables. 
+Il est recommandé de faire une évaluation des coûts en fonction de vos besoins spécifiques et 
+de consulter des fournisseurs de solutions pour obtenir des estimations précises.
