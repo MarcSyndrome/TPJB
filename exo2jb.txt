@@ -1,0 +1,15 @@
+==> 1. Quelle est l'adresse IP malveillante utilisée dans le fichier Employees_Contact_Audit_Oct_2021.docx ?
+
+L'adresse IP malveillante utilisée dans le fichier Employees_Contact_Audit_Oct_2021.docx est 175.24.190.249.
+
+==> 2. Quel est le nom de domaine malveillant utilisé dans le fichier Employee_W2_Form.docx file ?
+
+Le nom de domaine malveillant utilisé dans le fichier Employee_W2_Form.docx est arsenal.30cm.tw.
+
+==> 3. Quel est le nom de domaine malveillant utilisé dans le fichier Examing the Work_From_Home_Survey.doc ?
+
+Le nom de domaine malveillant utilisé dans le fichier Examing the Work_From_Home_Survey.doc est trendparlye.com.
+
+==> 4. Quel est le nom de domaine malveillant utilisé dans le fichier income_tax_and_benefit_return_2021.docx ?
+
+Le nom de domaine malveillant utilisé dans le fichier income_tax_and_benefit_return_2021.docx est hidusi.com.
