@@ -1,3 +1,22 @@
-on telecharge le fichier et il y'a des dossiers dedans avec des :
-injections sql, 
-des get pour voir avecun brut force si les addressessont presentes ou non,
+==> 1. Quel outil a été utilisé pendant la phase de reconnaissance (scan) ?
+
+Nikto pour la phase de reconnaissance.
+
+_________________________________________________________________________________________________________________________
+==> 2. Après la phase de reconnaissance, quelle technique a été utilisée pour découvrir la liste des répertoires 
+accessibles sur le serveur web ?
+
+Il a utilisé une méthode d'exploration par force brute pour découvrir les répertoires accessibles sur le serveur web.
+Il a testé différentes combinaisons de noms de fichiers et de chemins d'accès en utilisant des requêtes GET.
+
+_________________________________________________________________________________________________________________________
+==> 3. Après la fin de la phase de découverte des répertoires, de quel type d'attaque l'application est-elle la cible ?
+
+Il semble que l'application ait été la cible d'une attaque par force brute visant à deviner le mot de passe de la page 
+login.php.
+
+_________________________________________________________________________________________________________________________
+==> 4. Cette dernière attaque a-t-elle fonctionné ou a-t-elle échoué ?
+
+Après 131 tentatives, Il a réussi à trouver le mot de passe.
+
