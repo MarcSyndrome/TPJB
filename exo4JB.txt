@@ -1,0 +1,152 @@
+Cas d'étude 4
+
+Question 1:
+Dans le navigateur, accédez à : http://hackycorp.com/robots.txt
+
+Résultat :
+```
+User-agent: *
+Disallow: /
+
+# You solved recon_00
+# The key for this challenge is
+# af9c328a-02b4-439d-91c6-f46ab4a0835b
+```
+
+Question 2:
+Dans le navigateur, accédez à : http://hackycorp.com/error
+(remplacez "error" par n'importe quoi, vous obtiendrez une erreur 404)
+
+Résultat :
+```
+404 page! You solved recon_01
+The key for this challenge is: aeaee57f-2a82-41da-bc4c-d081c8cddfc8
+```
+
+Question 3:
+Dans le navigateur, accédez à : http://hackycorp.com/.well-known/security.txt
+
+Résultat :
+```
+# Please don't report any security issue for this site
+# This is a recon challenge and the key for this exercise is 
+# 99685e30-7061-4ac0-83bf-4ccc0409faac
+```
+
+Question 4:
+Dans le navigateur, accédez à : http://hackycorp.com/images
+Vous trouverez un fichier txt et en l'ouvrant :
+
+Résultat :
+```
+Nice find! You solved recon_03
+The key for this challenge is 93790afa-6985-47fd-b564-aa7ba59ed6a9
+```
+
+Question 5:
+Dans le navigateur, accédez à : http://hackycorp.com/admin/
+
+Résultat :
+```
+Well done! You solved recon_04
+The key for this exercise is: ad1d44d6-ab73-4640-8291-c5bf2343e2a5
+```
+
+Question 6:
+
+
+Question 7:
+Dans le terminal, utilisez la commande curl avec l'adresse IP :
+```
+curl -H "test" http://51.158.147.132/
+```
+
+Résultat :
+```
+<h1>Well done! You solved recon_06 </h1>
+The key for this exercise is 5cf83b5d-eb6c-4eee-af6c-945f9aed8dfd
+```
+
+Question 8:
+Dans le navigateur, accédez à : https://balancer.hackycorp.com/
+
+Résultat :
+```
+Well done! You solved recon_07
+The key for this exercise is 23eafa56-6d55-4b78-8307-24e7dc2ce5e6 ://
+```
+
+Question 9:
+Dans le site, inspectez puis allez dans l'onglet "Réseau" et rechargez le GET. Dans les en-têtes à droite, vous trouverez :
+
+```
+pentesterlab_recon_09
+	99d0738b-1e52-4a00-8885-b15894b2c79e
+```
+
+Question 10:
+
+
+Question 11:
+Avec l'aide de Mel, en utilisant un script bash, nous avons obtenu une image avec le texte :
+
+```
+483f8b15-e4a8-4387-b052-4b2204c17eb69
+```
+
+Question 12:
+
+
+Question 13:
+Il suffit de rafraîchir plusieurs fois la page balancer.hackycorp.com
+
+``
+
+`
+Well done! You solved recon_12
+The key for this exercise is 29e5c97c-7230-46ae-937c-6c56ff33b84f
+```
+
+Question 14:
+
+
+Question 15:
+
+
+Question 16:
+
+
+Question 17:
+
+
+Question 18:
+
+
+Question 19:
+
+
+Question 20:
+Commit 98b4472d5e46af145968345b262bc930c4b8c6e3
+Author: Hacky Dev 9590c69b-f9d0-469d-9475-827bf0e1126e@hackycorp.com
+Date: Wed Nov 18 10:49:08 2020 +1100
+
+Question 21:
+Accédez à : https://github.com/hackycorp/repo4/blob/test/KEY
+Ceci est la clé pour recon 21: a60b4aee-642a-483b-9262-ccfc2ed46f0d
+
+Question 22:
+Accédez à : https://github.com/hackycorp/repo9/commit/e8fec2d079cf9bfdf782a9ce4aab8ae8ce947548#diff-41a373ea209131c2ac8f7ae4305bc1e92c108e6bcd976bd41bc9ef0d3547ca84
+Ceci est la clé pour RECON_22: 3ee505c2-8aa9-4d5e-810e-921778dce1e6
+
+Question 23:
+Accédez à : https://github.com/hackycorp/repo0a/commit/a35a9174f3a6238a8ad70c549287d09e258f087b
+Another test
+Ceci est la clé pour RECON_23: 5c75cfe9-52dd-475b-8cfa-7ffc492abeca
+
+Question 24:
+
+
+Question 25:
+Dans les commentaires, vous trouverez :
+https://assets.hackycorp.com/js/script.js
+ptlab_key_recon_26: 'd6b75269-97a3-44de-be32-fff0dd55e7ef'

@@ -1,0 +1,126 @@
+vagrant@bullseye:/$ cd vagrant
+
+n°1
+la commande pour la version de Debian est
+vagrant@bullseye:/vagrant$ cat /etc/debian_version
+11.7
+
+n°2
+La commande pour afficher la date et l'heure définie sur le système est :
+    date
+
+n°3
+La timezone du système peut être trouvée en utilisant la commande :
+    timedatectl | grep "Time zone"
+
+n°4
+La commande pour modifier la timezone du système est :
+    sudo timedatectl set-timezone "Europe/Paris"
+
+n°5
+La commande pour créer un fichier file.txt avec le contenu "test" en une seule ligne est :
+    echo "test" > file.txt
+
+n°6
+La commande pour connaître le nom du système (nom d'hôte) est :
+    hostname
+
+n°7
+La commande pour modifier le nom d'hôte du système est :
+    sudo hostnamectl set-hostname newhostname
+
+n°8
+    La commande pour redémarrer le système est :
+    sudo reboot
+
+n°9
+    La commande pour connaître depuis combien de temps le système tourne est :
+    uptime
+
+n°10
+    La commande pour connaître l'espace disque disponible sur le système est :
+    df -h
+
+n°11
+    La commande pour connaître l'espace disque occupé par le répertoire /etc est :
+    du -sh /etc
+
+n°12
+    La commande pour savoir si le service sshd est démarré est :
+    systemctl status ssh
+
+n°13
+    La commande pour connaître le PID du service sshd est :
+    pgrep sshd
+
+n°14
+    La commande pour tuer le processus sshd à l'aide de son PID est :
+    sudo kill PID
+
+n°15
+    La commande pour connaître la liste des processus en cours est :
+    ps aux
+
+n°16
+     La commande pour connaître le nom de l'utilisateur actuellement connecté à la console est :
+    whoami
+
+n°17
+    La commande pour connaître le nom de tous les utilisateurs actuellement connectés au système est :
+    who
+
+n°18
+    La commande pour lancer une commande avec les droits root sans être root est :
+    sudo command
+
+n°19
+    La commande pour éditer le fichier de définition des commandes exécutées périodiquement est :
+    sudo crontab -e
+
+n°20
+    La commande pour vider l'historique de la ligne de commande de l'utilisateur en cours est :
+    history -c 
+
+n°21
+La commande permettant de connaître le nom et l’adresse IP de l’interface ethernet est :
+ifconfig
+
+n°22
+la commande permettant de connaître l’adresse IP de la passerelle (gateway)est :
+sql
+ip route show | grep default
+
+n°23
+le chemin du fichier dans lequel sont définis les DNS est 
+/etc/resolv.conf
+
+n°24
+La commande permettant de connaître l’adresse IP du DNS racine pour le domaine www.it-akademy.fr est :
+bash
+nslookup -type=NS it-akademy.fr
+
+n°25
+Le nom du paquet que vous avez dû installer pour répondre à la question précédente est
+dnsutils
+
+n°26
+La commande permettant de vérifier que la passerelle est accessible depuis la Debian est :
+php
+ping <adresse_IP_de_la_passerelle>
+
+n°27
+La commande permettant de connaître les adresses des équipements réseau entre la Debian et le serveur hébergeant it-akademy.fr est 
+traceroute it-akademy.fr
+
+n°28
+La commande permettant de connaître le nom d’hôte de la machine hébergeant it-akademy.fr est :
+nslookup it-akademy.fr
+
+n°29
+Le chemin du fichier local contenant des correspondances adresses IP / Nom de domaine est:
+/etc/hosts.
+
+n°30
+La commande permettant de faire pointer le domaine labo.it-akademy.fr vers l’adresse 127.0.0.1 est :
+bash
+echo "127.0.0.1 labo.it-akademy.fr" | sudo tee -a /etc/hosts 

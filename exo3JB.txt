@@ -1,0 +1,23 @@
+Cas d'étude 03
+
+Question 1: En visitant un site de vérification d'adresse IP, nous avons découvert que :
+
+This IP address has been reported a total of 15,152 times from 1,131 distinct sources.
+167.99.169.17 was first reported on November 21st, 2020, and the most recent report was 2 months ago.
+Donc oui, cette adresse IP est malveillante.
+
+Question 2: En utilisant des sources externes, je mettrais en œuvre les actions suivantes :
+
+- Réaliser des scans de vulnérabilité sur l'application pour repérer d'autres failles potentielles qui auraient pu être exploitées.
+- Analyser les journaux de sécurité et les journaux système à la recherche d'activités suspectes au niveau du serveur ou du système d'exploitation.
+- Vérifier l'intégrité des fichiers système et des fichiers d'application pour détecter toute modification non autorisée.
+- Effectuer une analyse des journaux du serveur web, y compris les journaux d'accès et les journaux d'erreurs, afin d'identifier d'autres tentatives d'exploitation de vulnérabilités ou de comportements suspects.
+- Examiner les données de la base de données pour détecter toute altération ou accès non autorisé. Vérifier si des attaques par injection SQL ont réussi et si elles ont entraîné des actions indésirables ou des dommages aux données.
+
+Question 3: Pour corriger ce type de faille et renforcer l'application, je mettrais en œuvre les mesures suivantes :
+
+- Appliquer une validation et un filtrage rigoureux des entrées utilisateur, en utilisant des listes blanches pour les caractères autorisés et en échappant les caractères spéciaux.
+- Mettre à jour régulièrement le logiciel et les bibliothèques utilisés par l'application pour bénéficier des correctifs de sécurité les plus récents.
+- Utiliser des requêtes préparées (prepared statements) ou des mécanismes de liaison de paramètres pour éviter les injections SQL.
+- Utiliser des pare-feux applicatifs Web (Web Application Firewalls - WAF) pour détecter et bloquer les attaques par injection SQL.
+- Implémenter des mécanismes de contrôle d'accès et des autorisations appropriées pour limiter les privilèges d'accès aux bases de données et aux ressources sensibles.
