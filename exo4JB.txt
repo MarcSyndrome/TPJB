@@ -12,7 +12,7 @@ Disallow: /
 # The key for this challenge is
 # af9c328a-02b4-439d-91c6-f46ab4a0835b
 ```
-
+________________________________________________________________________________________________________________________
 Question 2:
 Dans le navigateur, accédez à : http://hackycorp.com/error
 (remplacez "error" par n'importe quoi, vous obtiendrez une erreur 404)
@@ -22,7 +22,7 @@ Résultat :
 404 page! You solved recon_01
 The key for this challenge is: aeaee57f-2a82-41da-bc4c-d081c8cddfc8
 ```
-
+_________________________________________________________________________________________________________________________
 Question 3:
 Dans le navigateur, accédez à : http://hackycorp.com/.well-known/security.txt
 
@@ -32,7 +32,7 @@ Résultat :
 # This is a recon challenge and the key for this exercise is 
 # 99685e30-7061-4ac0-83bf-4ccc0409faac
 ```
-
+________________________________________________________________________________________________________________________
 Question 4:
 Dans le navigateur, accédez à : http://hackycorp.com/images
 Vous trouverez un fichier txt et en l'ouvrant :
@@ -42,7 +42,7 @@ Résultat :
 Nice find! You solved recon_03
 The key for this challenge is 93790afa-6985-47fd-b564-aa7ba59ed6a9
 ```
-
+________________________________________________________________________________________________________________________
 Question 5:
 Dans le navigateur, accédez à : http://hackycorp.com/admin/
 
@@ -51,10 +51,51 @@ Résultat :
 Well done! You solved recon_04
 The key for this exercise is: ad1d44d6-ab73-4640-8291-c5bf2343e2a5
 ```
-
+________________________________________________________________________________________________________________________
 Question 6:
+En utilisant gobuster sur hackycorp, et les mots clés dans le fichier bruteforcegobuster.txt, 
+marc@Syndrome:~$ gobuster -e -u https://hackycorp.com/ -w /home/marc/Documents/itStudents/2023/bruteforcegobuster.txt
+
+=====================================================
+Gobuster v2.0.1              OJ Reeves (@TheColonial)
+=====================================================
+[+] Mode         : dir
+[+] Url/Domain   : https://hackycorp.com/
+[+] Threads      : 10
+[+] Wordlist     : /home/marc/Documents/itStudents/2023/bruteforcegobuster.txt
+[+] Status codes : 200,204,301,302,307,403
+[+] Expanded     : true
+[+] Timeout      : 10s
+=====================================================
+2023/06/12 10:55:28 Starting gobuster
+=====================================================
+https://hackycorp.com/startpage (Status: 301)
+https://hackycorp.com/robots.txt (Status: 200)
+https://hackycorp.com/images (Status: 301)
+https://hackycorp.com/admin (Status: 301)
+https://hackycorp.com/.well-known (Status: 301)
+https://hackycorp.com//.well-known (Status: 301)
+https://hackycorp.com///admin/ (Status: 200)
+https://hackycorp.com//?wsdl (Status: 200)
+https://hackycorp.com//?view=log (Status: 200)
+https://hackycorp.com//admin (Status: 301)
+https://hackycorp.com//admin/ (Status: 200)
+https://hackycorp.com//admin/../admin (Status: 301)
+https://hackycorp.com//index.html (Status: 200)
+https://hackycorp.com//robots.txt (Status: 200)
+https://hackycorp.com//robots.txt/../admin/ (Status: 200)
+https://hackycorp.com//static/../admin/ (Status: 200)
+=====================================================
+2023/06/12 10:55:44 Finished
+=====================================================
 
 
+Donc je recois (en theorie) toutes les variantes d'adresses et dans startpage
+
+It works! You solved recon_05
+The key for this exercise is: 498621b0-17fe-4ebb-8324-3de7743fea51
+
+________________________________________________________________________________________________________________________
 Question 7:
 Dans le terminal, utilisez la commande curl avec l'adresse IP :
 ```
@@ -65,8 +106,14 @@ Résultat :
 ```
 <h1>Well done! You solved recon_06 </h1>
 The key for this exercise is 5cf83b5d-eb6c-4eee-af6c-945f9aed8dfd
-```
 
+Je suis tomber sur une autre solution, (tombé dessus par hasard) en regardant la question 10, je suis aller chercher les noms alternatifs
+et je suis tomber sur une addresse, 
+Nom DNS
+66177e3f25e3ea0713807b1dc5f0b9df.hackycorp.com
+et en cliquant dessus, bim
+```
+________________________________________________________________________________________________________________________
 Question 8:
 Dans le navigateur, accédez à : https://balancer.hackycorp.com/
 
@@ -75,7 +122,7 @@ Résultat :
 Well done! You solved recon_07
 The key for this exercise is 23eafa56-6d55-4b78-8307-24e7dc2ce5e6 ://
 ```
-
+________________________________________________________________________________________________________________________
 Question 9:
 Dans le site, inspectez puis allez dans l'onglet "Réseau" et rechargez le GET. Dans les en-têtes à droite, vous trouverez :
 
@@ -83,20 +130,33 @@ Dans le site, inspectez puis allez dans l'onglet "Réseau" et rechargez le GET. 
 pentesterlab_recon_09
 	99d0738b-1e52-4a00-8885-b15894b2c79e
 ```
+________________________________________________________________________________________________________________________
+Question 10:En utilisant openssl et la commande pour trouver les addresses DNS:
+openssl s_client -connect hackycorp.com:443 -servername hackycorp.com | openssl x509 -noout -text | grep DNS
 
-Question 10:
+On obtient:
 
-
+marc@Syndrome:~$ openssl s_client -connect hackycorp.com:443 -servername hackycorp.com | openssl x509 -noout -text | grep DNS
+depth=2 C = US, O = Internet Security Research Group, CN = ISRG Root X1
+verify return:1
+depth=1 C = US, O = Let's Encrypt, CN = R3
+verify return:1
+depth=0 CN = hackycorp.com
+verify return:1
+                DNS:66177e3f25e3ea0713807b1dc5f0b9df.hackycorp.com, DNS:hackycorp.com, DNS:www.hackycorp.com
+( on peut aussi les trouver en cliquant dans le navigateur sur la serrure et en cherchant dans l'onglet plus d'info, 
+afficher certificat)
+________________________________________________________________________________________________________________________
 Question 11:
 Avec l'aide de Mel, en utilisant un script bash, nous avons obtenu une image avec le texte :
 
 ```
 483f8b15-e4a8-4387-b052-4b2204c17eb69
 ```
-
+________________________________________________________________________________________________________________________
 Question 12:
 
-
+________________________________________________________________________________________________________________________
 Question 13:
 Il suffit de rafraîchir plusieurs fois la page balancer.hackycorp.com
 
@@ -106,7 +166,7 @@ Il suffit de rafraîchir plusieurs fois la page balancer.hackycorp.com
 Well done! You solved recon_12
 The key for this exercise is 29e5c97c-7230-46ae-937c-6c56ff33b84f
 ```
-
+________________________________________________________________________________________________________________________
 Question 14:
 
 
@@ -124,28 +184,33 @@ Question 18:
 
 Question 19:
 
-
+________________________________________________________________________________________________________________________
 Question 20:
 Commit 98b4472d5e46af145968345b262bc930c4b8c6e3
 Author: Hacky Dev 9590c69b-f9d0-469d-9475-827bf0e1126e@hackycorp.com
 Date: Wed Nov 18 10:49:08 2020 +1100
 
+________________________________________________________________________________________________________________________
 Question 21:
 Accédez à : https://github.com/hackycorp/repo4/blob/test/KEY
 Ceci est la clé pour recon 21: a60b4aee-642a-483b-9262-ccfc2ed46f0d
 
+________________________________________________________________________________________________________________________
 Question 22:
 Accédez à : https://github.com/hackycorp/repo9/commit/e8fec2d079cf9bfdf782a9ce4aab8ae8ce947548#diff-41a373ea209131c2ac8f7ae4305bc1e92c108e6bcd976bd41bc9ef0d3547ca84
 Ceci est la clé pour RECON_22: 3ee505c2-8aa9-4d5e-810e-921778dce1e6
 
+________________________________________________________________________________________________________________________
 Question 23:
 Accédez à : https://github.com/hackycorp/repo0a/commit/a35a9174f3a6238a8ad70c549287d09e258f087b
 Another test
 Ceci est la clé pour RECON_23: 5c75cfe9-52dd-475b-8cfa-7ffc492abeca
 
+________________________________________________________________________________________________________________________
 Question 24:
 
 
+________________________________________________________________________________________________________________________
 Question 25:
 Dans les commentaires, vous trouverez :
 https://assets.hackycorp.com/js/script.js
